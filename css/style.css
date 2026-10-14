@@ -1,0 +1,196 @@
+/* Remove espaçamentos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #3b2a22;
+}
+
+/* Cabeçalho */
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 60px;
+    background:#fff;
+}
+
+header img {
+    width: 190px;
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Menu */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    margin-right: 80px;
+}
+
+nav a{
+    color:#3b2a22;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:500;
+    transition:.3s;
+    position:relative;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:2px;
+    background:#9abce4;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+nav a:hover {
+    color: #9abce4;
+}
+
+/* Banner principal */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 520px;
+    padding: 60px;
+    gap: 50px;
+    background-color: #f7efe7;
+}
+
+.banner-texto {
+    width: 45%;
+}
+
+.banner-texto h1 {
+    margin-bottom: 22px;
+    font-family: Georgia, serif;
+    font-size: 54px;
+    line-height: 1.1;
+    color: #4a3328;
+}
+
+.banner-texto h1 span {
+    color: #9abce4;
+    font-style: italic;
+}
+
+.banner-texto p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3b2a22;
+}
+
+.botao-banner {
+    display: inline-block;
+    padding: 15px 26px;
+    background-color: #9abce4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-banner:hover {
+    background-color: #7fa6d4;
+    transform: translateY(-2px);
+}
+
+.banner-imagem {
+    width: 52%;
+}
+
+.banner-imagem img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+    header {
+        padding: 15px 30px;
+    }
+
+    nav {
+        gap: 25px;
+        margin-right: 0;
+    }
+
+    .banner {
+        padding: 45px 30px;
+    }
+
+    .banner-texto h1 {
+        font-size: 44px;
+    }
+}
+
+/* Responsividade para celular */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    header img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 25px;
+        margin: 0;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .banner-texto,
+    .banner-imagem {
+        width: 100%;
+    }
+
+    .banner-texto h1 {
+        font-size: 40px;
+    }
+
+    .banner-texto p {
+        font-size: 16px;
+    }
+
+    .banner-imagem img {
+        height: 320px;
+    }
+}
+
+
