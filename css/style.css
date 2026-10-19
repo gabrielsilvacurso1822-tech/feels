@@ -473,3 +473,133 @@ html, body {
     }
 }
 
+
+/* BOTÕES DO CATÁLOGO */
+
+button.botao-produto {
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.link-carrinho {
+    color: #51443e;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* PÁGINA DO CARRINHO */
+
+.pagina-carrinho {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.pagina-carrinho h1 {
+    color: #51443e;
+    margin-bottom: 12px;
+}
+
+.pagina-carrinho > p {
+    color: #746b65;
+    margin-bottom: 25px;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    background: #faf7f2;
+}
+
+.item-carrinho h3 {
+    color: #51443e;
+    margin-bottom: 8px;
+}
+
+.controles-carrinho {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.controles-carrinho button {
+    border: none;
+    background: #b7d4dc;
+    color: #263c43;
+    padding: 9px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.resumo-carrinho {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    padding-top: 25px;
+}
+
+.resumo-carrinho h2 {
+    color: #51443e;
+}
+
+#finalizar-pedido {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#finalizar-pedido:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.continuar-comprando {
+    color: #51443e;
+    text-decoration: underline;
+}
+
+.aviso-pedido {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* CARRINHO NO CELULAR */
+
+@media (max-width: 600px) {
+    .pagina-carrinho {
+        padding: 30px 15px;
+    }
+
+    .item-carrinho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resumo-carrinho {
+        align-items: stretch;
+    }
+
+    #finalizar-pedido {
+        width: 100%;
+    }
+
+    .link-carrinho {
+        display: block;
+        text-align: center;
+    }
+}
+
